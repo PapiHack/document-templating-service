@@ -2,8 +2,8 @@
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Issues](https://img.shields.io/github/issues/PapiHack/orange-sms-sender-service?style=for-the-badge&logo=appveyor)
-![PR](https://img.shields.io/github/issues-pr/PapiHack/orange-sms-sender-service?style=for-the-badge&logo=appveyor)
+![Issues](https://img.shields.io/github/issues/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
+![PR](https://img.shields.io/github/issues-pr/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
 [![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
 [![Open Source Love png](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
