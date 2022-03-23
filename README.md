@@ -15,8 +15,6 @@ For transforming the `docx` result to `PDF` you'll need have an instance of [Got
 
 ## Installation
 
-### Docker
-
 - First and foremost you'll need to have an instance of Gotenberg. You can easily have one by running the following docker command : 
 
         docker run --name gotenberg -d -p 3000:3000 gotenberg/gotenberg:7
@@ -52,8 +50,12 @@ For transforming the `docx` result to `PDF` you'll need have an instance of [Got
 
         - Visit the `API Documentation` at <http://localhost:8000/docs> or <http://localhost:8000/redoc>
 
-### With Docker Compose
 
+## Up & Running with Docker Compose
+
+If you are lazy like me 😄, you can setup the project by just running the following command :
+
+        docker-compose up -d
 
 
 ## Usage
@@ -65,6 +67,20 @@ For now you have an endpoint named `/api/v1/process-template-document` that will
 - The `data` parameter that is a `JSON` object with data or variable that we are going to inject in the `file` parameter
 
 As a response, you'll get back its corresponding `PDF` file as a result.
+
+### Example
+
+<table>
+    <tr>
+        <th>Template Example</th>
+        <th>Postman Test Result</th>
+    </tr>
+    <tr>
+        <td><img src="./screenshots/invoice-template-doc-example.png"/></td>
+        <td><img src="./screenshots/postman-test-screenshot.png"/></td>
+    </tr>
+</table>
+
 
 ### Screenshots
 
