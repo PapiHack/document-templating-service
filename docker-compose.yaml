@@ -1,0 +1,19 @@
+version: '3'
+services:
+  gotenberg:
+    container_name: gotenberg-service
+    image: gotenberg/gotenberg:7
+    restart: always
+    ports:
+      - "3000:3000"
+  api:
+    container_name: document-template-service
+    build: .
+    restart: always
+    depends_on:
+      - gotenberg
+    ports:
+      - "8000:8000"
+    environment:
+      - GOTENBERG_API_URL=http://gotenberg-service:3000
+      
