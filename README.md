@@ -81,6 +81,12 @@ As a response, you'll get back its corresponding `PDF` file as a result.
     </tr>
 </table>
 
+## 🚨 Cautions for Cloud Run 🚨
+
+If you plan to run this on cloud, please change the `gotenberg` docker image with `gotenberg/gotenberg:7-cloudrun` or `thecodingmachine/gotenberg:7-cloudrun` in `docker-compose.yaml` file. This will allow you to save cost and so on.
+
+For more infos, please look at [Gotenberg Docs](https://gotenberg.dev/docs/get-started/cloud-run).
+
 
 ### Screenshots
 
@@ -91,3 +97,8 @@ As a response, you'll get back its corresponding `PDF` file as a result.
 Feel free to make a PR or report an issue 😃
 
 Oh, one more thing, please do not forget to put a description when you make your PR 🙂
+
+## Author
+
+- [M.B.C.M](https://github.com/PapiHack)
+  [![My Twitter Link](https://img.shields.io/twitter/follow/the_it_dev?style=social)](https://twitter.com/the_it_dev)
