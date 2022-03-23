@@ -2,6 +2,8 @@ version: '3'
 services:
   gotenberg:
     container_name: gotenberg-service
+    # replace image with gotenberg/gotenberg:7-cloudrun or thecodingmachine/gotenberg:7-cloudrun
+    # if you plan to run it on cloud
     image: gotenberg/gotenberg:7
     restart: always
     ports:
@@ -16,4 +18,3 @@ services:
       - "8000:8000"
     environment:
       - GOTENBERG_API_URL=http://gotenberg-service:3000
-      
