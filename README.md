@@ -57,6 +57,13 @@ If you are lazy like me 😄, you can setup the project by just running the foll
 
         docker-compose up -d
 
+And stop all the service with :
+
+        docker-compose stop
+
+Or stop and remove all the service with :
+
+        docker-compose down
 
 ## Usage
 
