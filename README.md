@@ -53,7 +53,7 @@ For transforming the `docx` result to `PDF` you'll need have an instance of [Got
 
 ## Up & Running with Docker Compose
 
-If you are lazy like me 😄, you can setup the project by just running the following command :
+If you are lazy like me 😄, you can setup the project by just running the following commands :
 
         docker-compose up -d
 
@@ -67,11 +67,11 @@ Or stop and remove all the service with :
 
 ## Usage
 
-For now you have an endpoint named `/api/v1/process-template-document` that will allow you to make a `POST HTTP REQUEST` by sending two (2) required parameters :
+For now, you have an endpoint named `/api/v1/process-template-document` that will allow you to make a `POST HTTP REQUEST` by sending two (2) required parameters :
 
 - The `file` parameter that contains your `Word Document Template`
 
-- The `data` parameter that is a `JSON` object with data or variable that we are going to inject in the `file` parameter
+- The `data` parameter that is a `JSON object` with data or variable that we are going to inject in the `file` parameter
 
 As a response, you'll get back its corresponding `PDF` file as a result.
 
