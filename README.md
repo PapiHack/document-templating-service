@@ -53,7 +53,7 @@ For transforming the `docx` result to `PDF` you'll need have an instance of [Got
 
 ## Up & Running with Docker Compose
 
-If you are lazy like me 😄, you can setup the project by just running the following commands :
+If you are lazy like me 😄, you can setup the project by just running the following command :
 
         docker-compose up -d
 
