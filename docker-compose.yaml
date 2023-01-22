@@ -9,7 +9,7 @@ services:
     ports:
       - "3000:3000"
   api:
-    container_name: document-template-service
+    container_name: document-template-processor-service
     build: .
     restart: always
     depends_on:

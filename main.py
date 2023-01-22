@@ -33,7 +33,7 @@ async def process_document_template(data: Json = Body(...), file: UploadFile = F
         return JSONResponse({'status': 'error', 'message': 'file is required'}, status_code=400)
     if data is None or len(data) == 0:
         return JSONResponse({'status': 'error', 'message': 'data is required'}, status_code=400)
-    resourceURL = get_env('GOTENBERG_API_URL') + '/forms/libreoffice/convert'
+    resourceURL = '{}/forms/libreoffice/convert'.format(get_env('GOTENBERG_API_URL')) 
     file_path = 'temp/{}'.format(file.filename)
     pdf_file_path = 'temp/{}.pdf'.format(file.filename.split('.')[0])
     async with aiofiles.open(file_path, 'wb') as out_file:

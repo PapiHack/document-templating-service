@@ -5,6 +5,7 @@ venv
 .env.example
 Dockerfile
 .git
+.env
 README.md
 screenshots
 LICENSE
