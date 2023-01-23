@@ -10,6 +10,8 @@
 
 This is a simple and lightweight microservice that allow you to process your `Word` documents with a `templating system`, in order to hydrate it by injecting data or variables defined in it and get back its associated `PDF` result.
 
+Feel free to checkout the [official docker image](https://hub.docker.com/r/papihack/document-template-processor) on my docker hub.
+
 ## Notes
 
 For transforming the `docx` result to `PDF` you'll need have an instance of [Gotenberg](https://gotenberg.dev) up and running and provide its `ROOT URL` as an environment variable to the microservice.
