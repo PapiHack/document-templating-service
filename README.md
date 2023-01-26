@@ -80,7 +80,7 @@ Or stop and remove all the service with :
 If you want to deploy this project on your kubernetes cluster, you can inspect and/or edit the manifest files available in the 
 `k8s` directory before apply them.
 
-Start by creating the namespace named `utils` (feel free to change the name in `k8s/namespace.yaml`) by running :
+Start by creating the namespace named `utils` by running :
 
         kubectl apply -f k8s/namespace.yaml
 
