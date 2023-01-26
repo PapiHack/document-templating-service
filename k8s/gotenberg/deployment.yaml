@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gotenberg
+  namespace: utils
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gotenberg
+  template:
+    metadata:
+      labels:
+        app: gotenberg
+    spec:
+      containers:
+        - name: gotenberg
+          securityContext:
+            privileged: false
+            runAsUser: 1001
+          image: gotenberg/gotenberg:7-cloudrun
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "800m"
+          ports:
+            - name: web
+              containerPort: 3000

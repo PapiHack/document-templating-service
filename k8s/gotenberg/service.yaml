@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gotenberg
+  namespace: utils
+spec:
+  type: ClusterIP
+  selector:
+    app: gotenberg
+  ports:
+  - port: 80
+    name: http
+    targetPort: web

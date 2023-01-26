@@ -1,8 +1,9 @@
 # 🚀 Document Template Processing Service 🚀
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-[![docker](https://img.shields.io/badge/Docker-3776AB?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/papihack/document-template-processor)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+[![docker](https://img.shields.io/badge/Docker-3776AB?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/papihack/document-template-processor)
+[![kubernetes](https://img.shields.io/badge/kubernetes-3776AB?style=for-the-badge&logo=kubernetes&logoColor=white)](https://github.com/PapiHack/document-templating-service/tree/master/k8s)
 ![Issues](https://img.shields.io/github/issues/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
 ![PR](https://img.shields.io/github/issues-pr/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
 [![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
@@ -72,6 +73,27 @@ And stop all the service with :
 Or stop and remove all the service with :
 
         docker-compose down
+
+
+## Up & Running with Kubernetes
+
+If you want to deploy this project on your kubernetes cluster, you can inspect and/or edit the manifest files available in the 
+`k8s` directory before apply them.
+
+Start by creating the namespace named `utils` by running :
+
+        kubectl apply -f k8s/namespace.yaml
+
+Then, you can deploy the necessary components by running :
+
+        kubectl apply -f k8s/gotenberg -f k8s/document-template-processing
+
+After that, feel free to create an `ingress` for `svc/document-template-processing` if you are using such kind of k8s component.
+
+Otherwise, you can port forward the api service by running the following command before visiting <http://localhost:8000/docs> :
+
+        kubectl port-forward svc/document-template-processing 8000:8000 -n utils
+
 
 ## Usage
 

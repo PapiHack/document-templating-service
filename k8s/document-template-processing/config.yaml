@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: document-template-processing-config
+  namespace: utils
+data:
+  gotenberg-service-url: http://gotenberg.utils.svc
