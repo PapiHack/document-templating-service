@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: document-template-processing
+  namespace: utils
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: document-template-processing
+  template:
+    metadata:
+      labels:
+        app: document-template-processing
+    spec:
+      containers:
+        - name: document-template-processing
+          image: papihack/document-template-processor
+          env:
+            - name: GOTENBERG_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: document-template-processing-config
+                  key: gotenberg-service-url
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "800m"
+          ports:
+            - name: web
+              containerPort: 8000
