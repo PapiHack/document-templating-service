@@ -2,6 +2,7 @@
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 [![docker](https://img.shields.io/badge/Docker-3776AB?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/papihack/document-template-processor)
+[![kubernetes](https://img.shields.io/badge/kubernetes-3776AB?style=for-the-badge&logo=kubernetes&logoColor=white)](https://github.com/PapiHack/document-templating-service/tree/master/k8s)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Issues](https://img.shields.io/github/issues/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
 ![PR](https://img.shields.io/github/issues-pr/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
@@ -92,7 +93,6 @@ After that, feel free to create an `ingress` for `svc/document-template-processi
 Otherwise, you can port forward the api service by running the following command before visiting <http://localhost:8000/docs> :
 
         kubectl port-forward svc/document-template-processing 8000:8000 -n utils
-
 
 
 ## Usage
