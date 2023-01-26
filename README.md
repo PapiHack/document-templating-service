@@ -65,6 +65,28 @@ Or stop and remove all the service with :
 
         docker-compose down
 
+
+## Up & Running with Kubernetes
+
+If you want to deploy this project on your kubernetes cluster, you can inspect and/or edit the manifest files available in the 
+`k8s` directory before apply them.
+
+Start by creating the namespace named `utils` (feel free to change the name in `k8s/namespace.yaml`) by running :
+
+        kubectl apply -f k8s/namespace.yaml
+
+Then, you can deploy the necessary components by running :
+
+        kubectl apply -f k8s/gotenberg -f k8s/document-template-processing
+
+After that, feel free to create an `ingress` for `svc/document-template-processing` if you are using such kind of k8s component.
+
+Otherwise, you can port forward the api service by running the following command before visiting <http://localhost:8000/docs> :
+
+        kubectl port-forward svc/document-template-processing 8000:8000 -n utils
+
+
+
 ## Usage
 
 For now, you have an endpoint named `/api/v1/process-template-document` that will allow you to make a `POST HTTP REQUEST` by sending two (2) required parameters :
