@@ -1,6 +1,7 @@
 # 🚀 Document Template Processing Service 🚀
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+[![docker](https://img.shields.io/badge/Docker-3776AB?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/papihack/document-template-processor)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Issues](https://img.shields.io/github/issues/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
 ![PR](https://img.shields.io/github/issues-pr/PapiHack/document-templating-service?style=for-the-badge&logo=appveyor)
@@ -8,6 +9,8 @@
 [![Open Source Love png](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 This is a simple and lightweight microservice that allow you to process your `Word` documents with a `templating system`, in order to hydrate it by injecting data or variables defined in it and get back its associated `PDF` result.
+
+Feel free to checkout the [official docker image](https://hub.docker.com/r/papihack/document-template-processor) on my docker hub.
 
 ## Notes
 
@@ -47,6 +50,11 @@ For transforming the `docx` result to `PDF` you'll need have an instance of [Got
         - Start the service by creating a container with : 
         
                 docker run -d -p 8000:8000 -e GOTENBERG_API_URL=your-host-ip:3000 --name dtps document-template-processing-service
+
+        - An official image is also available on my [docker hub](https://hub.docker.com/r/papihack/document-template-processor), so you can simply run
+          the following command and skip the build step if you want too :
+        
+                docker run -d -p 8000:8000 -e GOTENBERG_API_URL=your-host-ip:3000 --name dtps papihack/document-template-processor
 
         - Visit the `API Documentation` at <http://localhost:8000/docs> or <http://localhost:8000/redoc>
 
